@@ -7,7 +7,6 @@ ws.title('To-Do List')
 ws.config(bg='#223441')
 ws.resizable(width=False, height=False)
 
-#
 
 
 # label for frame

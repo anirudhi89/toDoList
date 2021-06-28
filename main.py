@@ -92,14 +92,14 @@ addTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
 
 addTopTask_btn = Button(
     button_frame,
-    text = 'Add to Top',
+    text = 'Priority Add',
     font = 'times 14',
     bg = '#42f598',
     padx=20,
     pady=10,
     command=addTop
 )
-addTopTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
+addTopTask_btn.pack(fill=BOTH, expand=False, side=LEFT)
 
 delTask_btn = Button(
     button_frame,

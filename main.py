@@ -1,6 +1,14 @@
 from tkinter import *
 from tkinter import messagebox
 
+def addTop():
+    task = my_entry.get()
+    if task != "":
+        lb.insert(0, task)
+        my_entry.delete(0, "end")
+    else:
+        messagebox.showwarning("warning", "Please enter a task")
+
 def newTask():
     task = my_entry.get()
     if task != "":
@@ -82,10 +90,21 @@ addTask_btn = Button(
 )
 addTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
 
+addTopTask_btn = Button(
+    button_frame,
+    text = 'Add to Top',
+    font = 'times 14',
+    bg = '#42f598',
+    padx=20,
+    pady=10,
+    command=addTop
+)
+addTopTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
+
 delTask_btn = Button(
     button_frame,
     text='Delete Task',
-    font=('times 14'),
+    font='times 14',
     bg='#ff8b61',
     padx=20,
     pady=10,
